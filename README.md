@@ -13,10 +13,10 @@ The solution follows an **Event-Driven Serverless** pattern to minimize idle cos
 
 ```mermaid
 graph LR
-    User[Field Tech (Streamlit)] -->|Upload Photo| API[Boto3 / API Gateway]
-    API -->|Invoke| Agent[AWS Bedrock Agent]
-    Agent -->|Reasoning| Model[Claude 3.5 Sonnet]
-    Agent -->|Validation| Lambda[AWS Lambda (Rules Engine)]
-    Agent -->|Policy Check| Guard[Bedrock Guardrails]
+    User["Field Tech (Streamlit)"] -->|Upload Photo| API["Boto3 / API Gateway"]
+    API -->|Invoke| Agent["AWS Bedrock Agent"]
+    Agent -->|Reasoning| Model["Claude 3.5 Sonnet"]
+    Agent -->|Validation| Lambda["AWS Lambda (Rules Engine)"]
+    Agent -->|Policy Check| Guard["Bedrock Guardrails"]
     Guard -->|Approved/Blocked| User
 ```
