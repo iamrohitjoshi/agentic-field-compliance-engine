@@ -19,3 +19,4 @@ graph LR
     Agent -->|Validation| Lambda[AWS Lambda (Rules Engine)]
     Agent -->|Policy Check| Guard[Bedrock Guardrails]
     Guard -->|Approved/Blocked| User
+```
